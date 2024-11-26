@@ -1,1 +1,72 @@
-text
+:root{
+	text-align: center;
+	color: white;
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: firebrick;
+	padding: 0.4rem;
+
+.preface{
+	background-size: cover;
+	background-color: darkgreen;
+	/* box-shadow: inset 0px 0px 30px brown; */
+	border: 0.6rem inset #be4c32;
+	padding: 1.6rem 2.2rem;
+	margin-bottom: 0.8rem;
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.preface h1{
+	color: white;
+	margin-bottom: 1rem;
+}
+
+.thearray{
+	padding: 0.6rem;
+	display: flex;
+	flex-flow: row wrap;
+	border: 0.6rem inset #be4c32;
+	background-color: darkgreen;
+	color: firebrick;
+	justify-content: space-around;
+}
+
+.card{
+	margin: 1rem;
+	padding: 1.6rem;
+	width: 12rem;
+	height: 12rem;
+	color: white;
+	background-color: firebrick;
+	border: 0.2rem inset white;
+	display: inline-flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.card img{
+	margin-bottom: 0.6rem;
+	max-height: 4.5rem;
+	max-width: 4.5rem;
+}
+
+@media only screen and (orientation: portrait){
+	/* TODO */
+}
+
+
+
+
+
+
+
+
