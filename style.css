@@ -1,4 +1,5 @@
 :root{
+	font-size: 18px;
 	text-align: center;
 	color: white;
 	box-sizing: border-box;
@@ -9,15 +10,26 @@
 	padding: 0;
 }
 
+html{
+	height: 100vh;
+}
+
 body{
-	background-color: firebrick;
+	/* background-color: firebrick; */
+	background: linear-gradient(to bottom, darkred, firebrick, orange);
 	padding: 0.4rem;
+	display: flex;
+	flex-flow: column nowrap;
+	height: 100%;
+}
 
 .preface{
 	background-size: cover;
-	background-color: darkgreen;
+	background-image: url('trees.jpg');
+	/* background-color: darkgreen; */
 	/* box-shadow: inset 0px 0px 30px brown; */
-	border: 0.6rem inset #be4c32;
+	border: 0.6rem groove #9a3c27;
+	border-radius: 6px;
 	padding: 1.6rem 2.2rem;
 	margin-bottom: 0.8rem;
 	display: flex;
@@ -33,10 +45,15 @@ body{
 	padding: 0.6rem;
 	display: flex;
 	flex-flow: row wrap;
-	border: 0.6rem inset #be4c32;
-	background-color: darkgreen;
+	border: 0.6rem groove #9a3c27;
+	border-radius: 6px;
+	/* background-color: darkgreen; */
+	/* background: linear-gradient(to bottom, darkgreen, firebrick); */
+	background-image: url('fireplace.jpg');
+	background-size: cover;
 	color: firebrick;
 	justify-content: space-around;
+	align-items: flex-start;
 }
 
 .card{
@@ -46,7 +63,7 @@ body{
 	height: 12rem;
 	color: white;
 	background-color: firebrick;
-	border: 0.2rem inset white;
+	border: 0.2rem groove white;
 	display: inline-flex;
 	flex-flow: column nowrap;
 	align-items: center;
@@ -56,17 +73,14 @@ body{
 .card img{
 	margin-bottom: 0.6rem;
 	max-height: 4.5rem;
-	max-width: 4.5rem;
+	max-width: 6.5rem;
+	min-height:4.5rem;
+	min-width: 4.5rem;
 }
+
+
 
 @media only screen and (orientation: portrait){
-	/* TODO */
 }
-
-
-
-
-
-
 
 
