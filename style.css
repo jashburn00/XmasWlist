@@ -8,22 +8,41 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 html{
-	height: 100vh;
+	min-height:100vh;
 }
 
 body{
 	/* background-color: firebrick; */
 	background: linear-gradient(to bottom, darkred, firebrick, orange);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
 	padding: 0.4rem;
-	display: flex;
-	flex-flow: column nowrap;
-	height: 100%;
+	max-height: 99vh;
+	display: grid;
+	grid-template: 1fr 5fr / 1fr;
+	grid-template-areas: "toparea" "bottomarea";
+}
+
+@media (orientation: portrait){
+	body{
+		/* background-color: firebrick; */
+		background: linear-gradient(to bottom, darkred, firebrick, orange);
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		max-height: 99vh;
+		padding: 0.4rem;
+		display: grid;
+		grid-template: 1fr 6fr / 1fr;
+		grid-template-areas: "toparea" "bottomarea";		
+	}
 }
 
 .preface{
+	grid-area: toparea;
 	background-size: cover;
 	background-image: url('trees.jpg');
 	/* background-color: darkgreen; */
@@ -42,6 +61,7 @@ body{
 }
 
 .thearray{
+	grid-area: bottomarea;
 	padding: 0.6rem;
 	display: flex;
 	flex-flow: row wrap;
@@ -54,6 +74,8 @@ body{
 	color: firebrick;
 	justify-content: space-around;
 	align-items: flex-start;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 .card{
@@ -76,11 +98,6 @@ body{
 	max-width: 6.5rem;
 	min-height:4.5rem;
 	min-width: 4.5rem;
-}
-
-
-
-@media only screen and (orientation: portrait){
 }
 
 
