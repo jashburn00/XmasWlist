@@ -1,3 +1,4 @@
+/* poop  */
 :root{
 	font-size: 18px;
 	text-align: center;
@@ -28,7 +29,7 @@ body{
 	grid-template-areas: "toparea bottomarea";
 }
 
-@media (orientation: portrait){
+@media (orientation: portrait) or (max-width: 600px){
 	body{
 		/* background-color: firebrick; */
 		background: linear-gradient(to bottom, darkred, firebrick, orange);
@@ -95,29 +96,6 @@ body{
 	flex-grow: 1;
 }
 
-@media (max-width: 860px){
-	.card{
-		max-width: 88%;
-	}
-}
-
-@media (orientation: portrait){
-	.card{
-		margin: 1rem;
-		padding: 1.6rem;
-		width: 25rem;
-		min-height: 15rem;
-		color: white;
-		background-color: firebrick;
-		border: 0.2rem groove white;
-		display: inline-flex;
-		flex-flow: column nowrap;
-		align-items: center;
-		justify-content: space-between;
-		flex-grow: 1;
-	}
-}
-
 .card img{
 	margin-bottom: 0.6rem;
 	max-height: 7.5rem;
@@ -131,13 +109,19 @@ body{
 	margin-top: 0.5rem;
 }
 
-@media (orientation: portrait){
+@media (max-width: 860px) {
+	.card{
+		max-width: 88%;
+	}
+}
+
+@media (orientation: portrait) or (max-width: 600px) {
 	.card p{
-		font-size: 1.6rem;
+		font-size: 2.6rem;
 	}
 
 	.card h3 {
-		font-size: 2rem;
+		font-size: 3rem;
 		margin-bottom: 1rem;
 	}
 
@@ -145,7 +129,44 @@ body{
 		font-size: 3rem;
 	}
 
+	.preface{
+		grid-area: toparea;
+		background-size: cover;
+		background-image: url('trees.jpg');
+		/* background-color: darkgreen; */
+		/* box-shadow: inset 0px 0px 30px brown; */
+		border: 0.6rem groove #9a3c27;
+		border-radius: 6px;
+		padding: 1.6rem 2.2rem;
+		margin-bottom: 0.4rem;
+		margin-right: 0;
+		display: flex;
+		flex-flow: column nowrap;
+	}
+
 	.preface p{
-		font-size: 1.6rem;
+		font-size: 2rem;
+	}
+	
+	.card img{
+		max-height: 12rem;
+		max-width: 16.5rem;
+	}
+
+	.card{
+		margin-bottom: 1rem;
+		margin-right: 0;
+		color: yellow;
+		padding: 1.6rem;
+		max-width: 88%;
+		min-height: 15rem;
+		color: white;
+		background-color: firebrick;
+		border: 0.2rem groove white;
+		display: inline-flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		justify-content: space-between;
+		flex-grow: 1;
 	}
 }
