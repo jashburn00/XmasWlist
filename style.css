@@ -51,7 +51,7 @@ body{
 	border: 0.6rem groove #9a3c27;
 	border-radius: 6px;
 	padding: 1.6rem 2.2rem;
-	margin-bottom: 0.4rem;
+	margin-right: 0.4rem;
 	display: flex;
 	flex-flow: column nowrap;
 }
@@ -74,7 +74,7 @@ body{
 	background-size: cover;
 	color: firebrick;
 	justify-content: space-around;
-	align-items: flex-start;
+	align-items: center;
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
@@ -83,6 +83,7 @@ body{
 	margin: 1rem;
 	padding: 1.6rem;
 	width: 19rem;
+	max-width: 43%;
 	min-height: 15rem;
 	color: white;
 	background-color: firebrick;
@@ -91,6 +92,13 @@ body{
 	flex-flow: column nowrap;
 	align-items: center;
 	justify-content: space-between;
+	flex-grow: 1;
+}
+
+@media (max-width: 860px){
+	.card{
+		max-width: 88%;
+	}
 }
 
 @media (orientation: portrait){
@@ -106,6 +114,7 @@ body{
 		flex-flow: column nowrap;
 		align-items: center;
 		justify-content: space-between;
+		flex-grow: 1;
 	}
 }
 
@@ -138,4 +147,5 @@ body{
 
 	.preface p{
 		font-size: 1.6rem;
+	}
 }
