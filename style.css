@@ -24,7 +24,8 @@ body{
 	max-height: 99vh;
 	display: grid;
 	grid-template: 1fr 5fr / 1fr;
-	grid-template-areas: "toparea" "bottomarea";
+	grid-template: 1fr / 1fr 4fr;
+	grid-template-areas: "toparea bottomarea";
 }
 
 @media (orientation: portrait){
@@ -81,8 +82,8 @@ body{
 .card{
 	margin: 1rem;
 	padding: 1.6rem;
-	width: 12rem;
-	height: 12rem;
+	width: 19rem;
+	min-height: 15rem;
 	color: white;
 	background-color: firebrick;
 	border: 0.2rem groove white;
@@ -92,12 +93,49 @@ body{
 	justify-content: space-between;
 }
 
-.card img{
-	margin-bottom: 0.6rem;
-	max-height: 4.5rem;
-	max-width: 6.5rem;
-	min-height:4.5rem;
-	min-width: 4.5rem;
+@media (orientation: portrait){
+	.card{
+		margin: 1rem;
+		padding: 1.6rem;
+		width: 25rem;
+		min-height: 15rem;
+		color: white;
+		background-color: firebrick;
+		border: 0.2rem groove white;
+		display: inline-flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		justify-content: space-between;
+	}
 }
 
+.card img{
+	margin-bottom: 0.6rem;
+	max-height: 7.5rem;
+	max-width: 9.5rem;
+	min-height:5rem;
+	min-width: 5.5rem;
+}
 
+.card p {
+	font-size: 0.9rem;
+	margin-top: 0.5rem;
+}
+
+@media (orientation: portrait){
+	.card p{
+		font-size: 1.6rem;
+	}
+
+	.card h3 {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	h1{
+		font-size: 3rem;
+	}
+
+	.preface p{
+		font-size: 1.6rem;
+}
